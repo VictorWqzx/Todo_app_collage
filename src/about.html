@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App — О приложении</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Todo<span>App</span></a>
+      <nav class="nav">
+        <a class="nav__link" href="index.html">Главная</a>
+        <a class="nav__link nav__link--active" href="about.html">О приложении</a>
+      </nav>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--small">
+      <div class="container">
+        <h1 class="hero__title">О приложении</h1>
+        <p class="hero__subtitle">Две страницы, слайдер и сохранение задач в LocalStorage.</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container content__inner">
+        <div>
+          <h2 class="section-title">Функции</h2>
+          <ul class="list">
+            <li>Добавление, редактирование, удаление задач</li>
+            <li>Отметка выполнения</li>
+            <li>Сохранение в браузере</li>
+            <li>Адаптивная вёрстка</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="section-title">Технологии</h2>
+          <ul class="list">
+            <li>HTML5, SCSS, JavaScript</li>
+            <li>Gulp 4 (автосборка, live reload)</li>
+            <li>Автопрефиксер, минификация, sourcemaps</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> TodoApp.</p>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,20 @@
+@mixin fluid-type($min-vw, $max-vw, $min-font, $max-font) {
+  font-size: $min-font;
+  @media (min-width: $min-vw) {
+    font-size: calc(#{$min-font} + (#{$max-font} - #{$min-font}) * ((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw})));
+  }
+  @media (min-width: $max-vw) {
+    font-size: $max-font;
+  }
+}
+
+@mixin card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: $radius;
+  box-shadow: $shadow;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App — Главная</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" href="./images/favicon.png" />
+  <meta name="description" content="Небольшое приложение со списком задач и слайдером" />
+  <meta name="theme-color" content="#0ea5e9" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Todo<span>App</span></a>
+      <nav class="nav">
+        <a class="nav__link nav__link--active" href="index.html">Главная</a>
+        <a class="nav__link" href="about.html">О приложении</a>
+      </nav>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Управляй задачами с комфортом</h1>
+        <p class="hero__subtitle">Лёгкий, красивый и удобный список дел с локальным сохранением.</p>
+      </div>
+    </section>
+
+    <section class="slider" aria-label="Галерея преимуществ">
+      <div class="container">
+        <div class="slider__viewport">
+          <div class="slider__track" id="sliderTrack">
+            <div class="slide">
+              <h3>Быстро</h3>
+              <p>Добавляй задачи мгновенно, без лишних кликов.</p>
+            </div>
+            <div class="slide">
+              <h3>Красиво</h3>
+              <p>Чистый интерфейс и приятные детали.</p>
+            </div>
+            <div class="slide">
+              <h3>Всегда с тобой</h3>
+              <p>Задачи сохраняются в твоём браузере.</p>
+            </div>
+          </div>
+          <button class="slider__btn slider__btn--prev" id="btnPrev" aria-label="Предыдущий слайд">‹</button>
+          <button class="slider__btn slider__btn--next" id="btnNext" aria-label="Следующий слайд">›</button>
+          <div class="slider__dots" id="sliderDots" aria-label="Пагинация слайдера"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="todo">
+      <div class="container">
+        <h2 class="section-title">Список дел</h2>
+        <form class="todo-form" id="todoForm" autocomplete="off">
+          <input class="input" id="todoInput" type="text" placeholder="Новая задача..." aria-label="Новая задача" />
+          <button class="btn" type="submit">Добавить</button>
+        </form>
+        <ul class="todo-list" id="todoList" aria-live="polite"></ul>
+        <div class="todo-actions">
+          <button class="btn btn--ghost" id="clearCompleted">Очистить выполненные</button>
+          <button class="btn btn--ghost" id="clearAll">Очистить всё</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> TodoApp. Сделано с заботой.</p>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
